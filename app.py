@@ -68,7 +68,7 @@ def main():
             input = st.text_area("What kind of post do you want me to generate?:")
             
             if st.button("Generate"):
-                response = openai.Completion.create(model="text-davinci-003", prompt=prompt + input + '"', temperature=0, max_tokens=7)
+                response = openai.Completion.create(model="text-davinci-003", prompt=prompt + input + '"', temperature=0.7, max_tokens=256, top_p=1, frequency_penalty=0, presence_penalty=0)
 
             st.text("AI:")
             placeholder = st.empty()
@@ -94,3 +94,8 @@ if __name__ == "__main__":
         main()
     except SystemExit:
         pass
+
+
+
+
+
