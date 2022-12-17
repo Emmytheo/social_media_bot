@@ -44,7 +44,7 @@ def main():
             ('Advertisement', 'Storytelling', 'Football Commentary', 'Novelist', 'Screenwriting'))
         with st.expander("Generate Post", expanded=True):
             temp = st.sidebar.slider('Temperature', 0.0, 1.0, 0.7 )
-            max_tok = st.sidebar.slider('Max Token', 0, 300, 50 )
+            max_tok = st.sidebar.slider('Max Token', 0, 1000, 50 )
             input = st.text_area("What kind of post do you want me to generate?:")
             
             if st.button("Generate"):
