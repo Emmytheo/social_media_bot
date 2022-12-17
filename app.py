@@ -12,6 +12,7 @@ from decouple import config
 # Load your API key from an environment variable or secret management service
 openai.api_key = config("OPENAI_API_KEY")
 
+prompt = "I want you to act as an advertiser. You will create a campaign to promote a product or service of your choice. You will choose a target audience, develop key messages and slogans, select the media channels for promotion, and decide on any additional activities needed to reach your goals. My first suggestion request is"
 
 def main():
     st.header("Social Media Manager")
@@ -67,7 +68,7 @@ def main():
             input = st.text_area("What kind of post do you want me to generate?:")
             
             if st.button("Generate"):
-                response = openai.Completion.create(model="text-davinci-003", prompt="Say this is just a test,", temperature=0, max_tokens=7)
+                response = openai.Completion.create(model="text-davinci-003", prompt=prompt, temperature=0, max_tokens=7)
 
             st.text("AI:")
             placeholder = st.empty()
