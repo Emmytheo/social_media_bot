@@ -4,3 +4,8 @@ streamlit-chat
 streamlit-on-Hover-tabs
 python-decouple
 openai
+textblob
+altair
+htbuilder
+tweepy
+click
